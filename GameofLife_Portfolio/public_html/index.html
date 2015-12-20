@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>MY LIFE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="js/loadimg.js"></script>
+        <script type="text/javascript" src="js/gol.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/conwaystylemobile.css" />
+    </head>
+    <body class="lab"  onLoad="javascript:yangrun()">
+        <div id="container">
+
+            <center>
+                <div id="centerboard">
+                    <div  id="yangboard"></div>
+                </div>
+            </center>
+            <br>
+            <center>
+                <form id="test" onsubmit="return false;">
+                    <div class="buttons">
+                        <input type="button" name="play" value="Play" onclick="myplayer.play();" /> |
+                        <input type="button" name="stop" value="Stop" onclick="myplayer.stop();" /> | 
+                        <input type="button" name="mukto" value="Conway" id="mukto" onclick="myplayer.mukto();" />
+                    </div>
+                </form>
+            </center>
+
+        </div>
+</html>

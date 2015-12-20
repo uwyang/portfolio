@@ -1,0 +1,127 @@
+/* Navbar Desktopsize
+----------------------------------------------------------*/
+
+/*logo */
+#nav-logo {
+    background: url(/Images/urbispot.gif) no-repeat left;
+    background-size: cover;
+    display: block;
+    width: 170px;
+    text-indent: -9999px; /* hides the link text */
+    margin-left: 15px;
+    margin-top:3px;
+
+
+.custom-navbar .fa {
+    font-size: 25px;a
+}
+
+ul.menu {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 5px;
+    padding: 0;
+    text-align: right;
+}
+
+    ul.menu li {
+        display: inline;
+        list-style: none;
+        padding-left: 15px;
+    }
+
+        ul.menu li span.menu-user {
+            display: block;
+            background: none;
+            color: #999;
+            text-decoration: none;
+            line-height: 20px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+
+        ul.menu li span.menu-user {
+            display: block;
+            background: none;
+            color: #999;
+            text-decoration: none;
+            line-height: 20px;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+
+        ul.menu li a {
+            background: none;
+            color: #999;
+            text-decoration: none;
+        }
+
+            ul.menu li a:hover {
+                color: #333;
+                text-decoration: none;
+            }
+
+.logoff {
+    padding-right:20px;
+}
+
+.logoff:hover {
+    color: #ffffff !important;
+}
+
+.username{
+    color: #b6ff00 !important;
+}
+.username:hover{
+    color: #ffffff !important;
+}
+
+
+/********************
+*   Mobile Styles   *
+********************/
+@media only screen and (max-width: 800px) {
+    /* menu    */
+    nav {
+        margin-bottom: 5px;
+    }
+
+    ul.menu {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+        ul.menu li {
+            margin: 0;
+            padding: 0;
+        }
+
+    /* custom menu for urbispot*/
+    .custom-navbar .navbar-right {
+        float: right;
+        padding-right: 15px;
+    }
+
+    .custom-navbar .nav.navbar-nav.navbar-right li {
+        float: right;
+    }
+
+        .custom-navbar .nav.navbar-nav.navbar-right li > a {
+            padding: 8px 5px;
+        }
+
+    .custom-navbar .navbar-toggle {
+        float: left;
+    }
+
+    .custom-navbar .navbar-header {
+        float: left;
+        width: auto !important;
+    }
+
+    .custom-navbar .navbar-collapse {
+        clear: both;
+        float: none;
+    }
+}
