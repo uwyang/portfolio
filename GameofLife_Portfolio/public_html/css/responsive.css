@@ -1,0 +1,51 @@
+body {
+    padding-top: 60px;
+}
+
+#imgsearch{
+    margin: 0px auto;
+    width: 80%;
+    text-align: center;
+}
+
+#playcontrol{
+    /*text-align: center;*/
+    margin: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding-top: 0px;
+    }
+    
+}
+
+@media (min-width:0px) and (max-width:900px) { 
+    .navbar {
+        display: table;
+        width: 100%;
+    }
+    .navbar-brand,
+    .navbar-search,
+    .navbar-toggle { display: table-cell }
+    .navbar-search {
+        padding: 7.5px 10px 0 0;
+        width: 1%;
+    }
+}
+@media (max-width:400px) { 
+    .navbar-search {
+        padding: 7.5px 15px;
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+}
+@media (min-width:900px) { 
+    .navbar-search {
+        float: left;
+        margin: 7.5px 0;
+    }
+}
+

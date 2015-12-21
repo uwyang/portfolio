@@ -9,11 +9,75 @@ and open the template in the editor.
         <title>MY LIFE</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="js\libs\twitter-bootstrap\css\bootstrap.css">
+        <link rel="stylesheet" href="js\libs\twitter-bootstrap\css\bootstrap-theme.css">
+
+        <!-- jQuery library -->
+        <script src="js\libs\jQuery\jquery-2.1.4.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="js\libs\twitter-bootstrap\js\bootstrap.js"></script>
+
+
         <script type="text/javascript" src="js/loadimg.js"></script>
         <script type="text/javascript" src="js/gol.js"></script>
+        
+        <!--
+        <link rel="stylesheet" type="text/css" href="css/site.css" />
+        -->
+        <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+        <!-- 
         <link rel="stylesheet" type="text/css" href="css/conwaystylemobile.css" />
+        !-->
+        
+        
     </head>
-    <body class="lab"  onLoad="javascript:yangrun()">
+    <body onLoad="javascript:yangrun()">
+        
+        <div class="navbar-wrapper">
+
+            <div class="navbar-container">
+
+                <nav class=" navbar navbar-inverse navbar-static-top custom-navbar" role="navigation">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-header">
+                        <p class="site-title">HOME</p>
+                    </div>
+                    <!-- Non-collapsing right-side icons -->
+                    <ul class="nav navbar-nav navbar-right menu" >
+                        <li>Register</li>
+                        <li>login</li>
+                        <li>
+                            <a href="#" class="">lang.</a>
+                        </li>
+                    </ul>
+
+                    <!-- the collapsing menu -->
+                    <div class="collapse navbar-collapse navbar-left" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav menu">
+                            <li class="active">Home</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </nav>
+
+
+            </div><!-- /container -->
+
+        </div>
+        
+        
+        <div class="test">hello, this is test. </div>
+        
+        
         <div id="container">
 
             <center>
@@ -24,10 +88,10 @@ and open the template in the editor.
             <br>
             <center>
                 <form id="test" onsubmit="return false;">
-                    <div class="buttons">
-                        <input type="button" name="play" value="Play" onclick="myplayer.play();" /> |
-                        <input type="button" name="stop" value="Stop" onclick="myplayer.stop();" /> | 
-                        <input type="button" name="mukto" value="Conway" id="mukto" onclick="myplayer.mukto();" />
+                    <div class="btn-group">
+                        <input class="btn btn-primary" type="button" name="play" value="Play" onclick="myplayer.play();" /> |
+                        <input class="btn btn-primary" type="button" name="stop" value="Stop" onclick="myplayer.stop();" /> |
+                        <input class="btn btn-primary" type="button" name="mukto" value="Conway" id="mukto" onclick="myplayer.mukto();" />
                     </div>
                 </form>
             </center>

@@ -3,7 +3,7 @@
 
 /*logo */
 #nav-logo {
-    background: url(/Images/urbispot.gif) no-repeat left;
+    background: url(/img/urbispot.gif) no-repeat left;
     background-size: cover;
     display: block;
     width: 170px;
@@ -13,7 +13,7 @@
 
 
 .custom-navbar .fa {
-    font-size: 25px;a
+    font-size: 25px;
 }
 
 ul.menu {
