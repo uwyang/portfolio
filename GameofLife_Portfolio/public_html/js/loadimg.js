@@ -1,39 +1,44 @@
-img = new Image();
+var img = new Image();
+var imgarr;
 //muktosrc = "img/mukto_teachingmobile.png";
 //conwaysrc = "img/conway_mobile.png";
-muktosrc = "img/QR48.png";
-conwaysrc = "img/QR48.png";
-img.src = muktosrc;
+var pngarr = ["img/aha.png",
+    "img/gospergun.png",
+    "img/koks.png",
+    "img/koks.png"];
+img.src = pngarr[0];
 //size of each cells
-cellsize = 10;
+var cellsize = 15;
 var wcellnum, hcellnum;
+var maxsize = 200;
 
 
 
 //console.log(img.height);
 //console.log(img.width);
 
-function setimg() {
+function setimg(num) {
     w = window.innerWidth || document.body.clientWidth;
     h = window.innerHeight || document.body.clientHeight;
-    wcellnum = Math.max(Math.ceil((w / cellsize) / 2) * 2, img.width);
-    hcellnum = Math.max(Math.floor((h / cellsize) / 2) * 2, img.height);
+    wcellnum = Math.min(Math.max(Math.ceil(((w / cellsize - img.width)) / 2) * 2 + img.width, img.width), maxsize);
+    hcellnum = Math.max(Math.floor(((h / cellsize - img.height)) / 2) * 2 + img.height, img.height);
 
+    console.log("num for set image: " + num);
     if (window.mobilecheck()) {
-        imgsrc = conwaysrc;
+        img.src = pngarr[num];
     } else {
-        imgsrc = conwaysrc;
+        img.src = pngarr[num];
     }
-    console.log(window.mobilecheck());
     console.log(w + " " + h);
-
+    return;
 }
 
 
-function getimgarr(img) {
-    setimg();
-    var canvas = document.createElement("canvas");
+function getimgarr(img, num) {
+    setimg(num);
 
+
+    var canvas = document.createElement("canvas");
     canvas.width = img.width;
     canvas.height = img.height;
     // Copy the image contents to the canvas
