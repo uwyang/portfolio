@@ -2,10 +2,15 @@ var img = new Image();
 var imgarr;
 //muktosrc = "img/mukto_teachingmobile.png";
 //conwaysrc = "img/conway_mobile.png";
-var pngarr = ["img/aha.png",
+var pngarr_h = ["img/aha.png",
     "img/gospergun.png",
     "img/koks.png",
     "img/koks.png"];
+var pngarr_v = ["img/aha_mobile.png",
+    "img/gospergun_mobile.png",
+    "img/koks_mobile.png",
+    "img/koks_mobile.png"];
+var pngarr = pngarr_h;
 img.src = pngarr[0];
 //size of each cells
 var cellsize = 15;
@@ -25,8 +30,10 @@ function setimg(num) {
 
     console.log("num for set image: " + num);
     if (window.mobilecheck()) {
+        pngarr = pngarr_v;
         img.src = pngarr[num];
     } else {
+        pngarr = pngarr_h;
         img.src = pngarr[num];
     }
     console.log(w + " " + h);
@@ -73,10 +80,13 @@ function transferimg(game, imgarr) {
             game.cells[i][j].alivenext = false;
         }
     }
-    woffset = Math.round((wcellnum - img.width) / 2);
-    hoffset = Math.round((hcellnum - img.height) / 2);
-    for (i = 0; i < imgarr.length; i++) {
-        for (j = 0; j < imgarr[0].length; j++) {
+    woffset = Math.max(Math.floor((wcellnum - img.width) / 2), 0);
+    hoffset = Math.max(Math.floor((hcellnum - img.height) / 2), 0);
+    console.log("image size: " + img.width + " " + img.height);
+    console.log("off sets: " + woffset + " " + hoffset);
+    console.log("game board size: " + game.cells.length + " " + game.cells[0].length);
+    for (i = 0; i < Math.min(imgarr.length, wcellnum); i++) {
+        for (j = 0; j < Math.min(imgarr[0].length, hcellnum); j++) {
             //console.log("i, j: " + i + " " + j);
             game.cells[i + woffset][j + hoffset].alive = imgarr[i][j];
             game.cells[i + woffset][j + hoffset].alivenext = imgarr[i][j];
